@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="all.css">
+    <script src="all.js"></script>
 
 </head>
 
@@ -29,88 +30,80 @@
                     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
                     crossorigin="anonymous"></script>
                 <div class="row">
-                    <div class="col-4" style="position: fixed; top: 20; right: 0; height: 100vh;">
-                        <div class="col-4">
-                            <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
-                                <nav class="nav nav-pills flex-column">
-                                    <a class="nav-link" href="#item-1">Item 1</a>
+
+
+                    <!-- 滾動間諜開始 -->
+                    <div class="spyContainer" style="  position: relative;">
+                        <div class="buttonContainer">
+                            <button type="button" id="toggleButton" class="toggle-button"
+                                style="float:right;  position: fixed;right: 10px;top: 180px;"></button>
+                        </div>
+                        <div class="col-4" id="hiddenBlock" style="display: none;  position: fixed;
+                        top: 230px;
+                        right: 6px;
+                        width: 120px;
+                        background-color: rgb(255, 255, 255);
+                        overflow: hidden;">
+                            <div class="col-4">
+                                <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
                                     <nav class="nav nav-pills flex-column">
-                                        <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
-                                        <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
-                                    </nav>
-                                    <a class="nav-link" href="#item-2">Item 2</a>
-                                    <a class="nav-link" href="#item-3">Item 3</a>
-                                    <nav class="nav nav-pills flex-column">
-                                        <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-                                        <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                                        <a class="nav-link" href="#item-1">Item 1</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#item-1-1" style="width: 100px;">Item
+                                                1-1</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                                        </nav>
+                                        <a class="nav-link" href="#item-2">Item 2</a>
+                                        <a class="nav-link" href="#item-3">Item 3</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                                            <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                                        </nav>
                                     </nav>
                                 </nav>
-                            </nav>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-8" data-bs-spy="scroll">
+                    <!-- 滾動間諜結束 -->
+
+
+                    <div class="col-8" data-bs-spy="scroll" id="scrollContainer" style="width: (100vw);">
                         <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
                             class="scrollspy-example-2" tabindex="0">
                             <div id="item-1">
                                 <h4>Item 1</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore vero error
-                                    molestias vitae, ea laboriosam voluptas! Illo quae sint repudiandae animi minus
-                                    ratione sed ad eveniet omnis saepe, aperiam velit harum earum illum natus incidunt,
-                                    quo et aliquid voluptatibus esse voluptas, iste maxime quaerat. Iure quaerat,
-                                    distinctio dolore nostrum necessitatibus accusantium! Libero autem inventore odit
-                                    distinctio. Voluptatum mollitia illo harum modi ullam provident earum vitae adipisci
-                                    facilis distinctio assumenda, cumque quisquam eos soluta deleniti officiis
-                                    necessitatibus quidem, autem quae eaque sit natus maxime. Eveniet, laborum nostrum
-                                    voluptatum voluptate saepe aliquam velit cupiditate! Ex voluptatem neque, amet quia
-                                    quod accusantium porro!</p>
+                                <p>當初的夜空布滿了繁星，微風輕拂著臉龐，帶來陣陣清涼。站在這個宁靜的角落，我感受著大自然的呼吸，思緒也隨著夜色飄逸。或許，生活就像這片夜空，充滿了無限的可能性，等待著我們去探索，去品味。每顆星星都是一個夢想，而我，將在這片星海中，追尋屬於自己的光芒。
+                                </p>
                             </div>
                             <div id="item-1-1">
                                 <h5>Item 1-1</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis accusantium minus
-                                    tempore, quibusdam dolore magni voluptatibus fugit animi consequatur sequi atque
-                                    dolorum blanditiis qui laborum nulla exercitationem, mollitia, eaque deserunt!
-                                    Assumenda possimus sapiente officiis necessitatibus nobis rem beatae eos deleniti,
-                                    nihil explicabo placeat eius soluta eaque atque. Assumenda, magni omnis.</p>
+                                <p>當初的夜空布滿了繁星，微風輕拂著臉龐，帶來陣陣清涼。站在這個宁靜的角落，我感受著大自然的呼吸，思緒也隨著夜色飄逸。或許，生活就像這片夜空，充滿了無限的可能性，等待著我們去探索，去品味。每顆星星都是一個夢想，而我，將在這片星海中，追尋屬於自己的光芒。
+                                </p>
                             </div>
                             <div id="item-1-2">
                                 <h5>Item 1-2</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis accusantium minus
-                                    tempore, quibusdam dolore magni voluptatibus fugit animi consequatur sequi atque
-                                    dolorum blanditiis qui laborum nulla exercitationem, mollitia, eaque deserunt!
-                                    Assumenda possimus sapiente officiis necessitatibus nobis rem beatae eos deleniti,
-                                    nihil explicabo placeat eius soluta eaque atque. Assumenda, magni omnis.</p>
+                                <p>當初的夜空布滿了繁星，微風輕拂著臉龐，帶來陣陣清涼。站在這個宁靜的角落，我感受著大自然的呼吸，思緒也隨著夜色飄逸。或許，生活就像這片夜空，充滿了無限的可能性，等待著我們去探索，去品味。每顆星星都是一個夢想，而我，將在這片星海中，追尋屬於自己的光芒。
+                                </p>
                             </div>
                             <div id="item-2">
                                 <h4>Item 2</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis accusantium minus
-                                    tempore, quibusdam dolore magni voluptatibus fugit animi consequatur sequi atque
-                                    dolorum blanditiis qui laborum nulla exercitationem, mollitia, eaque deserunt!
-                                    Assumenda possimus sapiente officiis necessitatibus nobis rem beatae eos deleniti,
-                                    nihil explicabo placeat eius soluta eaque atque. Assumenda, magni omnis.</p>
+                                <p>當初的夜空布滿了繁星，微風輕拂著臉龐，帶來陣陣清涼。站在這個宁靜的角落，我感受著大自然的呼吸，思緒也隨著夜色飄逸。或許，生活就像這片夜空，充滿了無限的可能性，等待著我們去探索，去品味。每顆星星都是一個夢想，而我，將在這片星海中，追尋屬於自己的光芒。
+                                </p>
                             </div>
                             <div id="item-3">
                                 <h4>Item 3</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis accusantium minus
-                                    tempore, quibusdam dolore magni voluptatibus fugit animi consequatur sequi atque
-                                    dolorum blanditiis qui laborum nulla exercitationem, mollitia, eaque deserunt!
-                                    Assumenda possimus sapiente officiis necessitatibus nobis rem beatae eos deleniti,
-                                    nihil explicabo placeat eius soluta eaque atque. Assumenda, magni omnis.</p>
+                                <p>當初的夜空布滿了繁星，微風輕拂著臉龐，帶來陣陣清涼。站在這個宁靜的角落，我感受著大自然的呼吸，思緒也隨著夜色飄逸。或許，生活就像這片夜空，充滿了無限的可能性，等待著我們去探索，去品味。每顆星星都是一個夢想，而我，將在這片星海中，追尋屬於自己的光芒。
+                                </p>
                             </div>
                             <div id="item-3-1">
                                 <h5>Item 3-1</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis accusantium minus
-                                    tempore, quibusdam dolore magni voluptatibus fugit animi consequatur sequi atque
-                                    dolorum blanditiis qui laborum nulla exercitationem, mollitia, eaque deserunt!
-                                    Assumenda possimus sapiente officiis necessitatibus nobis rem beatae eos deleniti,
-                                    nihil explicabo placeat eius soluta eaque atque. Assumenda, magni omnis.</p>
+                                <p>當初的夜空布滿了繁星，微風輕拂著臉龐，帶來陣陣清涼。站在這個宁靜的角落，我感受著大自然的呼吸，思緒也隨著夜色飄逸。或許，生活就像這片夜空，充滿了無限的可能性，等待著我們去探索，去品味。每顆星星都是一個夢想，而我，將在這片星海中，追尋屬於自己的光芒。
+                                </p>
                             </div>
                             <div id="item-3-2">
                                 <h5>Item 3-2</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis accusantium minus
-                                    tempore, quibusdam dolore magni voluptatibus fugit animi consequatur sequi atque
-                                    dolorum blanditiis qui laborum nulla exercitationem, mollitia, eaque deserunt!
-                                    Assumenda possimus sapiente officiis necessitatibus nobis rem beatae eos deleniti,
-                                    nihil explicabo placeat eius soluta eaque atque. Assumenda, magni omnis.</p>
+                                <p>當初的夜空布滿了繁星，微風輕拂著臉龐，帶來陣陣清涼。站在這個宁靜的角落，我感受著大自然的呼吸，思緒也隨著夜色飄逸。或許，生活就像這片夜空，充滿了無限的可能性，等待著我們去探索，去品味。每顆星星都是一個夢想，而我，將在這片星海中，追尋屬於自己的光芒。
+                                </p>
                             </div>
                         </div>
                     </div>
