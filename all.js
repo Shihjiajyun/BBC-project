@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollContainer = document.getElementById("scrollContainer");
     let isHiddenBlockVisible = false;
 
+
     toggleButton.addEventListener("click", function () {
         isHiddenBlockVisible = !isHiddenBlockVisible;
         hiddenBlock.style.display = isHiddenBlockVisible ? "block" : "none";
