@@ -1,27 +1,54 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>test測試網頁</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="#" rel="shortcut icon">
-    <meta charset="UTF-8">
-    <script src="javascripts/vendor.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="all.css">
-    <script src="all.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="styles.css" rel="stylesheet" />
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="all.css"> -->
+    <!-- <script src="all.js"></script> -->
 </head>
 
-<body class="bg-lighter">
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+        style="display: block; background-color: white; box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">test測試網頁</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <!-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="index.html#article">新手文章</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#video">影音專區</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#aboutus">團隊介紹</a></li>
+                </ul>
+            </div>
+            <style>
+                .navbar-nav li.nav-item:hover a.nav-link {
+                    color: #EB5E38;
+                }
+            </style>
+        </div>
+    </nav>
     <div class="container main my-5">
         <div class="row">
             <main class="col post">
                 <!-- 章節標題 -->
-                <div class="mb-4">
+                <br>
+                <br>
+                <div class="">
                     <h1 class="mt-0">第一篇文章
                     </h1>
                 </div>
@@ -34,7 +61,7 @@
 
 
                     <!-- 滾動間諜開始 -->
-                    <div class="spyContainer" style="  position: relative;">
+                    <!-- <div class="spyContainer" style="  position: relative;">
                         <div class="buttonContainer">
                             <button type="button" id="toggleButton" class="toggle-button"
                                 style="float:right;  position: fixed;right: 10px;top: 170px;"></button>
@@ -64,7 +91,7 @@
                                 </nav>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- 滾動間諜結束 -->
 
 
@@ -113,30 +140,19 @@
                         <a href="index.html"><button type="button" class=" btn btn-outline-secondary">回首頁</button></a>
                         <a href=""><button type="button" class=" btn btn-outline-secondary">下一篇文章→</button></a>
                     </div>
-
-
                 </div>
-                <!-- 滾動間諜 -->
             </main>
-
             <!-- <aside class="col-md-3" data-bs-target="#navId">
                 <div class="sticky-top" style="top: 76px">
                     <div class="list-group">
-
-                        <a href="/intro/createApp.html" class="list-group-item list-group-item-action
-        
-        ">
+                        <a href="/intro/createApp.html" class="list-group-item list-group-item-action">
                             item-1
                         </a>
-
                         <a href="/intro/basic_structure.html" class="list-group-item list-group-item-action
-        
         ">
                             item-1-1
                         </a>
-
                         <a href="/intro/two_way_binding.html" class="list-group-item list-group-item-action
-        
         ">
                             item-1-2
                         </a>
@@ -172,49 +188,6 @@
 
         </div>
     </div>
-
-    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-secondary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">test測試網頁</a>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <!-- <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link " href="/es6/shorthand.html">JS 必備觀念</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/intro/createApp.html">認識 Vue.js</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/template/v-text.html">模板</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/optionsApi/options-methods.html">方法</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/components/component_register.html">元件</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/advApi/adv-refs.html">進階</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/router/vue-router.html">路由</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/composition/proxy.html">Composition API</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="/pinia/layout.html">Pinia</a>
-                    </li>
-                </ul> -->
-            </div>
-        </div>
-    </nav>
-
-    <!-- <footer class="footer py-2 bg-light">
-        <div class="container text-center">
-            <small class="text-black-50 fw-light mb-0">六角學院 Vue 課程專屬文件</small>
-        </div>
-    </footer> -->
     <!-- <link rel="stylesheet" href="stylesheets/all.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </body>
