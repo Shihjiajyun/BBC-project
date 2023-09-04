@@ -74,4 +74,39 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const cardContainer = document.getElementById('cardContainer');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    let currentIndex = 0;
+    const cardWidth = 18 + 10; // 卡片寬度 + margin-right
+
+    // 初始化顯示的卡片
+    function showCards() {
+        cardContainer.style.transform = `translateX(-${currentIndex * cardWidth}rem)`;
+    }
+
+    // 上一組卡片
+    prevButton.addEventListener('click', function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            showCards();
+        }
+    });
+
+    // 下一組卡片
+    nextButton.addEventListener('click', function () {
+        const numCards = cardContainer.children.length;
+        if (currentIndex < numCards - 4) {
+            currentIndex++;
+            showCards();
+        }
+    });
+
+    // 初始化顯示第一組卡片
+    showCards();
+});
+
+
 
