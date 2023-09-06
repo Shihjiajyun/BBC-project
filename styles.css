@@ -12838,3 +12838,7 @@ header.masthead .h1 {
 #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png) repeat;
+}
