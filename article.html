@@ -19,6 +19,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="styles.css" rel="stylesheet" />
     <script src="all.js"></script>
+    <script src="article.js"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
 </head>
@@ -48,510 +49,244 @@
         </div>
     </nav>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Fraunces:ital,wght@0,500;0,600;0,700;1,600&display=swap');
-
-        *,
-        *:after,
-        *:before {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            font-size: 1rem;
-            line-height: 1.5;
-            background-color: #f8f3eb;
-            color: #484847;
-            padding-bottom: 5rem;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
-        .responsive-wrapper {
-            width: 95%;
-            max-width: 1900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .header {
-            padding-right: 1.5rem;
-            padding-left: 1.5rem;
-            padding-top: 3rem;
-            padding-bottom: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-left {
-
-            svg {
-                max-height: 40px;
-                width: auto;
-            }
-        }
-
-        .header-middle {
-            display: none;
-
-            @media (min-width: 1200px) {
-                display: block;
-            }
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-nav {
-            display: none;
-
-            @media (min-width: 1200px) {
-                display: block;
-            }
-        }
-
-        .header-link {
-            color: #000;
-            text-decoration: none;
-            margin-left: .75rem;
-            margin-right: .75rem;
-            display: none;
-            font-weight: 500;
-            display: inline-block;
-
-            &--button {
-                background-color: #000;
-                color: #fff;
-                padding: .5rem 1.25rem;
-            }
-
-            @media (min-width: 1200px) {}
-        }
-
-        .header-menu-button {
-            margin-left: .75rem;
-            border: 0;
-            padding: 0;
-            background-color: transparent;
-            font: inherit;
-            position: relative;
-            padding-right: 30px;
-            font-weight: 500;
-
-            &:after,
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                width: 20px;
-                height: 2px;
-                background-color: currentcolor;
-                right: 0;
-                top: 8px;
-            }
-
-            &:after {
-                top: 16px;
-                width: 12px;
-                right: 8px;
-            }
-        }
-
-        .page-title {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-            display: flex;
-            justify-content: center;
-
-            h1 {
-                font-size: 1.75rem;
-                font-weight: 700;
-                color: #000;
-                text-align: center;
-                position: relative;
-
-
-                &:after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: 100%;
-                    bottom: -3px;
-                    height: 2px;
-                    background-color: currentcolor;
-                }
-            }
-        }
-
-        .magazine-layout {
-            margin-top: 3rem;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-row-gap: 2rem;
-        }
-
-        .magazine-column {
-            padding: 0 1.5rem;
-            grid-column: span 5;
-
-            @media (min-width: 1200px) {
-                grid-column: span 1;
-                border-right: 1px solid #CCC;
-
-                &:last-child {
-                    border-right: none;
-                }
-            }
-
-            &:nth-child(2) {
-                @media (min-width: 1200px) {
-                    grid-column: span 2;
-                }
-            }
-        }
-
-        .article {
-            &+.article {
-                padding-top: 2rem;
-                margin-top: 2rem;
-                border-top: 1px solid #ccc;
-            }
-        }
-
-        .article-img {
-            &+* {
-                margin-top: 1rem;
-            }
-        }
-
-        .article-link {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .article-title {
-            font-family: "Fraunces", serif;
+        header {
+            font-family: 'Playfair Display', serif;
             font-weight: 900;
-            line-height: 1.25;
-            color: #000;
-
-            &--large {
-                font-size: 2rem;
-
-                &+* {
-                    margin-top: 1.5rem;
-                }
-            }
-
-            &--medium {
-                font-size: 1.5rem;
-
-                &+* {
-                    margin-top: 0.75rem;
-                }
-            }
-
-            &--small {
-                font-size: 1.25rem;
-
-                &+* {
-                    margin-top: 0.75rem;
-                }
-            }
-        }
-
-        .article-link {
-            color: inherit;
-        }
-
-        .mark {
-            background-color: #fabea1;
-
-            &--secondary {
-                background-color: #c2dddf;
-            }
-
-            &--tertiary {
-                background-color: #F8E177;
-            }
-        }
-
-        .article-excerpt,
-        .article-creditation {
-            font-size: 1.125rem;
-            line-height: 1.4;
-
-            p+p {
-                margin-top: 1.5rem;
-            }
-        }
-
-        .article-author {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 1.5rem;
-        }
-
-        .article-author-img {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 12px;
-            background-color: #323232;
-            overflow: hidden;
-            background-blend-mode: multiply;
-
-            img {}
-
-            &+.article-author-info {
-                margin-left: 0.5rem;
-            }
-        }
-
-        .article-author-info {
-            line-height: 1.375;
-
-            dl {
-                margin-top: 0.25em;
-            }
-
-            dt {
-                font-weight: 600;
-            }
-
-            dd {
-                font-size: 0.875em;
-            }
-        }
-
-        .article-category {
-            font-weight: 500;
-            margin-bottom: 1rem;
-            display: block;
-
-            svg {
-                max-width: 1.5rem;
-                margin-right: .5rem;
-                vertical-align: middle;
-            }
+            font-size: 80px;
+            text-transform: uppercase;
+            display: inline-block;
+            line-height: 72px;
+            margin-bottom: 20px;
 
         }
 
-        .article-podcast-player {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            margin-top: 1.25rem;
+
+        .head {
+            text-align: center;
+            position: relative;
+
+
         }
 
-        .podcast-play-button {
-            width: 2.25rem;
-            height: 2.25rem;
-            border-radius: 12px;
-            border: 0;
-            background-color: #000;
-            margin-right: .5rem;
+        .headerobjectswrapper {}
 
-            svg {
-                max-width: 1rem;
-                max-height: 1rem;
-                fill: #FFF;
-            }
-        }
+        .subhead {
+            text-transform: uppercase;
+            border-bottom: 2px solid #2f2f2f;
+            border-top: 2px solid #2f2f2f;
+            padding: 12px 0 12px 0;
 
-        .podcast-progression {
-            flex: 1;
-            height: 8px;
-            border-radius: 99em;
-            background-color: #D9D4CD;
-            background-image: linear-gradient(to right, #F99970 30%, #D9D4CD 30%, #D9D4CD 100%)
-        }
-
-        .podcast-time {
-            font-weight: 500;
-            font-size: 1.125rem;
-            margin-left: .5rem;
-        }
-
-        :focus {
-            outline: 0;
         }
     </style>
-    <header class="header responsive-wrapper">
-        <div class="header-left">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="233.445"
-                height="52.805" viewBox="0 0 233.445 52.805">
-                <defs>
-                    <clipPath id="clip-fox-news-logo">
-                        <rect width="233.445" height="52.805" />
-                    </clipPath>
-                </defs>
-            </svg>
+
+    <body>
+        <div class="head" style="margin-top: 6rem;">
+            <div class="headerobjectswrapper">
+                <header>文章專區</header>
+            </div>
+            <div class="subhead">這裡收錄的我們所有的新手文章</div>
         </div>
-    </header>
-    <main class="responsive-wrapper">
-        <div class="page-title">
-            <h1>文章專區</h1>
-        </div>
-        <div class="magazine-layout">
-            <!-- 第一行開始 -->
-            <div class="magazine-column">
-                <article class="article">
-                    <h2 class="article-title article-title--large">
-                        <a href="#" class="article-link">這裡放第一篇文章的標題</a>
-                    </h2>
-                    <div class="article-excerpt">
-                        <p>在這片森林裡，每一株樹木都有著自己的故事。有的是年邁的巨木，見證了幾代人的生活，它們的樹皮上刻滿了時光的印記。有的是嫩綠的樹苗，它們正在茁壯成長，為未來的森林做出貢獻。森林裡的小溪潺潺流淌，水面上荷葉靜靜地飄浮著。偶爾有魚兒躍出水面，溅起一朵朵水花，為這個寧靜的世界增添了一絲生氣。坐在小溪邊，你可以感受到大自然的和諧，也可以反思自己的生活。或許，我們在城市中總是忙碌著，追逐著繁忙的生活節奏，卻忽略了大自然的美麗。
+        <style>
+            :root {
+                --accent: #c7ecee;
+                --accentComplimentary: #7ed6df;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font: 400 100%/1 "Nunito", serif;
+                background-color: #f7f1e3;
+                color: #2f3640;
+            }
+
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 350px);
+                gap: 35px;
+                padding: 60px 35px;
+                justify-content: center;
+            }
+
+            .card {
+                border-radius: 35px;
+                overflow: hidden;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 500px;
+            }
+
+            .card__top {
+                position: relative;
+                background-color: var(--accentComplimentary);
+                padding: 35px 35px 70px 35px;
+                z-index: 0;
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .card__top:has(.card__figure) {
+                aspect-ratio: 3/2;
+            }
+
+            .card__bottom {
+                position: relative;
+                margin-top: -35px;
+                background-color: var(--accent);
+                padding: 35px;
+                border-radius: 35px;
+                display: flex;
+                gap: 60px;
+                flex-direction: column;
+                justify-content: space-between;
+                flex-grow: 1;
+                z-index: 1;
+            }
+
+            .card__figure {
+                position: absolute;
+                inset: 0;
+                /* mix-blend-mode: lighten;
+                opacity: 0.5; */
+            }
+
+            .card__image {
+                width: 100%;
+                height: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+
+            .card__tag {
+                padding: 10px 20px;
+                border: 1px solid currentColor;
+                border-radius: 2em;
+                position: relative;
+                z-index: 1;
+                color: rgb(0, 0, 0);
+                /* 设置文本颜色为蓝色 */
+                font-weight: bold;
+                /* 设置字体粗细为正常（非粗体） */
+            }
+
+            .card__title {
+                font-size: 2.5rem;
+            }
+
+            .card__text {
+                font-size: 1.25rem;
+            }
+
+            .card--reverse {
+                flex-direction: column-reverse;
+            }
+
+            .card--reverse .card__bottom {
+                margin-top: 0;
+                margin-bottom: -35px;
+            }
+
+            .card--reverse .card__top {
+                position: relative;
+                padding: 70px 35px 35px 35px;
+                align-items: flex-end;
+            }
+
+            .card--primary {
+                --accent: #ffbe76;
+                --accentComplimentary: #706fd3;
+            }
+
+            .card--secondary {
+                --accent: #63cdda;
+                --accentComplimentary: #f5cd79;
+            }
+
+            .card--tertiary {
+                --accent: #888df1;
+                --accentComplimentary: #ff9ff3;
+            }
+
+            .grid {
+                list-style-type: none;
+            }
+        </style>
+        <ul class="grid">
+            <li class="grid__item">
+                <div class="card card--primary">
+                    <div class="card__top">
+                        <!-- <span class="card__tag">
+                            作者
+                        </span> -->
+                        <figure class="card__figure">
+                            <img class="card__image" src="https://picsum.photos/id/37/400/300" width="400"
+                                height="300" />
+                        </figure>
+                    </div>
+                    <div class="card__bottom">
+                        <h2 class="card__title">
+                            第一篇文章標題
+                        </h2>
+                        <p class="card__text">
+                            第一篇文智的簡述第一篇文智的簡述第一篇文智的簡述第一篇文智的簡述第一篇文智的簡述第一篇文智的簡述第一篇文智的簡述第一篇文智的簡述第一篇文智的簡述
+                            <br><br>作者：王大名
                         </p>
-                        <p>作者，以及寫作日期
+                        <a href="#"><button type="button" class="btn btn-primary btn-lg active">閱讀詳細資訊</button></a>
                     </div>
-                    <div class="article-author">
-                        <div class="article-author-img">
-                            <img src="https://assets.codepen.io/285131/author-3.png" />
-                        </div>
-                        <div class="article-author-info">
-                            <dl>
-                                <dt>作者名稱</dt>
-                                <dd>報導</dd>
-                            </dl>
-                        </div>
+                </div>
+            </li>
+            <li class="grid__item">
+                <div class="card card--secondary card--reverse">
+                    <div class="card__top">
+                        <!-- <span class="card__tag">
+                            Peaches
+                        </span> -->
+                        <figure class="card__figure">
+                            <img class="card__image" src="https://picsum.photos/id/77/400/300" width="400"
+                                height="300" />
+                        </figure>
                     </div>
-                </article>
-                <article class="article">
-                    <h2 class="article-title article-title--medium">
-                        <a href="#" class="article-link">第二篇文章標題放這裡</a>
-                    </h2>
-                    <div class="article-creditation">
-                        <p>這篇文章的概述</p>
-                    </div>
-                    <div class="article-author">
-                        <div class="article-author-img">
-                            <img src="https://assets.codepen.io/285131/author-3.png" />
-                        </div>
-                        <div class="article-author-info">
-                            <dl>
-                                <dt>作者名稱</dt>
-                                <dd>報導</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <!-- 第一行結束 -->
-            <!-- 第二行開始 -->
-            <div class="magazine-column">
-                <article class="article">
-                    <figure class="article-img">
-                        <img
-                            src="https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
-                    </figure>
-                    <h2 class="article-title article-title--medium">
-                        <a href="#" class="article-link">第三篇文章放這裡</a>
-                    </h2>
-                    <div class="article-excerpt">
-                        <p>Yeah, it's safe to say these guys have a great sense of humor, which isn't really suprising
-                            for us considering their seemingly absurd solution to online payments. Instead of chasing
-                            1000-hour programming contracts to build clunky payments solutions for each individual
-                            client, the Collison...</p>
-                    </div>
-                    <div class="article-author">
-                        <div class="article-author-img">
-                            <img src="https://assets.codepen.io/285131/author-2.png" />
-                        </div>
-                        <div class="article-author-info">
-                            <dl>
-                                <dt>James Robert</dt>
-                                <dd>Editor</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </article>
-                <article class="article">
-                    <h2 class="article-title article-title--large">
-                        <a href="#" class="article-link">這裡放第七篇文章的標題</a>
-                    </h2>
-                    <div class="article-excerpt">
-                        <p>在這片森林裡，每一株樹木都有著自己的故事。有的是年邁的巨木，見證了幾代人的生活，它們的樹皮上刻滿了時光的印記。有的是嫩綠的樹苗，它們正在茁壯成長，為未來的森林做出貢獻。森林裡的小溪潺潺流淌，水面上荷葉靜靜地飄浮著。偶爾有魚兒躍出水面，溅起一朵朵水花，為這個寧靜的世界增添了一絲生氣。坐在小溪邊，你可以感受到大自然的和諧，也可以反思自己的生活。或許，我們在城市中總是忙碌著，追逐著繁忙的生活節奏，卻忽略了大自然的美麗。
+                    <div class="card__bottom">
+                        <h2 class="card__title">
+                            第二篇文章標題
+                        </h2>
+                        <p class="card__text">
+                            第二篇文章簡述第二篇文章簡述第二篇文章簡述第二篇文章簡述第二篇文章簡述第二篇文章簡述第二篇文章簡述第二篇文章簡述第二篇文章簡述
+                            <br><br>作者：王大名
                         </p>
-                        <p>作者，以及寫作日期
+                        <a href="#"><button type="button" class="btn btn-primary btn-lg active">閱讀詳細資訊</button></a>
                     </div>
-                    <div class="article-author">
-                        <div class="article-author-img">
-                            <img src="https://assets.codepen.io/285131/author-3.png" />
-                        </div>
-                        <div class="article-author-info">
-                            <dl>
-                                <dt>作者名稱</dt>
-                                <dd>報導</dd>
-                            </dl>
-                        </div>
+                </div>
+            </li>
+            <li class="grid__item">
+                <div class="card card--tertiary">
+                    <div class="card__top">
+                        <figure class="card__figure">
+                            <img class="card__image" src="https://picsum.photos/id/50/400/300" width="400"
+                                height="300" />
+                        </figure>
                     </div>
-                </article>
-            </div>
-            <!-- 第二行結束 -->
-            <!-- 第三行開始 -->
-            <div class="magazine-column">
-                <article class="article">
-                    <figure class="article-img">
-                        <img
-                            src="https://images.unsplash.com/photo-1512521743077-a42eeaaa963c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" />
-                    </figure>
-                    <h2 class="article-title article-title--small">
-                        <a href="#" class="article-link">第四篇文章</a>
-                    </h2>
-                    <div class="article-creditation">
-                        <p>By Jonathan O'Connell</p>
+                    <div class="card__bottom">
+                        <h2 class="card__title">
+                            第三篇文章標題
+                        </h2>
+                        <p class="card__text">
+                            第三篇文章簡述第三篇文章簡述第三篇文章簡述第三篇文章簡述第三篇文章簡述第三篇文章簡述第三篇文章簡述第三篇文章簡述第三篇文章簡述第三篇文章簡述
+                            <br><br>作者：王大名
+                        </p>
+                        <a href="#"><button type="button" class="btn btn-primary btn-lg active">閱讀詳細資訊</button></a>
                     </div>
-                </article>
-                <article class="article">
-                    <figure class="article-img">
-                        <img
-                            src="https://images.unsplash.com/photo-1569234817121-a2552baf4fd4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" />
-                    </figure>
-                    <h2 class="article-title article-title--small">
-                        <a href="#" class="article-link">第五篇文章</a>
-                    </h2>
-                    <div class="article-creditation">
-                        <p>By Jonathan O'Connell</p>
-                    </div>
-                </article>
-            </div>
-            <!-- 第三行結束 -->
-            <!-- 第四行開始 -->
-            <div class="magazine-column">
-                <article class="article">
-                    <h2 class="article-title article-title--medium">
-                        <a href="#" class="article-link">第六篇文章</a>
-                    </h2>
-                    <div class="article-excerpt">
-                        <p>Slack has become indispensible for many businesses operation remotely during the pandemic.
-                            Here's what the acquisition could mean for users...</p>
-                    </div>
-                    <div class="article-author">
-                        <div class="article-author-img">
-                            <img src="https://assets.codepen.io/285131/author-2.png" />
-                        </div>
-                        <div class="article-author-info">
-                            <dl>
-                                <dt>James Robert</dt>
-                                <dd>Editor</dd>
-                            </dl>
-                        </div>
-                    </div>
-                </article>
-                <article class="article">
-                    <small class="article-category">
-                    </small>
-                </article>
-            </div>
-            <!-- 第四行結束 -->
-        </div>
-    </main>
+                </div>
+            </li>
+        </ul>
+
+
+    </body>
+
 
 
     <footer class="bg-light py-5">

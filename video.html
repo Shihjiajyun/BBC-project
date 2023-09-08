@@ -49,21 +49,6 @@
     </nav>
     <html>
     <style>
-        .separator {
-            width: 230px;
-            border-top: 3px solid #000;
-            /* 可以根据需要更改颜色 */
-            margin: 20px 0;
-            /* 可以根据需要更改上下间距 */
-        }
-
-        body {
-            font-family: 'Droid Serif', serif;
-            font-size: 14px;
-            color: #2f2f2f;
-            background-color: #f9f7f1;
-        }
-
         header {
             font-family: 'Playfair Display', serif;
             font-weight: 900;
@@ -75,10 +60,6 @@
 
         }
 
-        p {
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
 
         .head {
             text-align: center;
@@ -96,277 +77,6 @@
             padding: 12px 0 12px 0;
 
         }
-
-        .weatherforcastbox {
-            position: relative;
-            width: 12%;
-            left: 10px;
-            border: 3px double #2f2f2f;
-            padding: 10px 15px 10px 15px;
-            line-height: 20px;
-            display: inline-block;
-            margin: 0 50px 20px -360px;
-        }
-
-        .content {
-            font-size: 0;
-            line-height: 0;
-            word-spacing: -.31em;
-            display: inline-block;
-            margin: 30px 2% 0 2%;
-        }
-
-        .collumns {
-            /* display: flex; */
-            justify-content: space-between;
-        }
-
-        .collumn {
-            font-size: 14px;
-            line-height: 20px;
-            width: 17.5%;
-            display: inline-block;
-            padding: 0 1% 0 1%;
-            vertical-align: top;
-            margin-bottom: 50px;
-            transition: all .7s;
-            /* display: flex;
-            justify-content: space-between; */
-        }
-
-        .collumn+.collumn {
-            border-left: 1px solid #2f2f2f;
-        }
-
-        .collumn .headline {
-            text-align: center;
-            line-height: normal;
-            font-family: 'Playfair Display', serif;
-            display: block;
-            margin: 0 auto;
-
-
-        }
-
-        .collumn .headline.hl1 {
-            font-weight: 700;
-            font-size: 30px;
-            text-transform: uppercase;
-            padding: 10px 0 10px 0;
-
-        }
-
-        .collumn .headline.hl2 {
-            font-weight: 400;
-            font-style: italic;
-            font-size: 24px;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl2:before {
-            border-top: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 7px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .collumn .headline.hl2:after {
-            border-bottom: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 13px;
-            display: block;
-            margin: 0 auto;
-
-        }
-
-        .collumn .headline.hl3 {
-            font-weight: 400;
-            font-style: italic;
-            font-size: 36px;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl4 {
-            font-weight: 700;
-            font-size: 12px;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl4:before {
-            border-top: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 7px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .collumn .headline.hl4:after {
-            border-bottom: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 10px;
-            display: block;
-            margin: 0 auto;
-
-        }
-
-        .collumn .headline.hl5 {
-            font-weight: 400;
-            font-size: 42px;
-            text-transform: uppercase;
-            font-style: italic;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl6 {
-            font-weight: 400;
-            font-size: 18px;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl6:before {
-            border-top: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 7px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .collumn .headline.hl6:after {
-            border-bottom: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 10px;
-            display: block;
-            margin: 0 auto;
-
-        }
-
-        .collumn .headline.hl7 {
-            font-weight: 700;
-            font-size: 12px;
-            box-sizing: border-box;
-            display: block;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl8 {
-            font-weight: 700;
-            font-size: 12px;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl9 {
-            font-weight: 700;
-            font-size: 12px;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .headline.hl10 {
-            font-weight: 700;
-            font-size: 12px;
-            box-sizing: border-box;
-            padding: 10px 0 10px 0;
-        }
-
-        .collumn .citation {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            line-height: 44px;
-            /*font-style: italic;*/
-            text-align: center;
-            font-weight: 400;
-            display: block;
-            margin: 40px 0 40px 0;
-            font-feature-settings: "liga", "dlig";
-
-        }
-
-        .collumn .citation:before {
-            border-top: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 16px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .collumn .citation:after {
-            border-bottom: 1px solid #2f2f2f;
-            content: '';
-            width: 100px;
-            height: 16px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .collumn .figure {
-            margin: 0 0 20px;
-        }
-
-        .collumn .figcaption {
-            font-style: italic;
-            font-size: 12px;
-        }
-
-        .media {
-            /* -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
-            filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
-            mix-blend-mode: multiply; */
-            width: 100%;
-        }
-
-        @media only all and (max-width: 1300px) {
-            .weatherforcastbox {
-                display: none;
-            }
-
-        }
-
-        @media only all and (max-width: 1200px) {
-            .collumn {
-                width: 31%;
-            }
-
-        }
-
-        @media only all and (max-width: 900px) {
-            .collumn {
-                width: 47%;
-            }
-
-        }
-
-        @media only all and (max-width: 600px) {
-            .collumn {
-                width: 100%;
-            }
-
-            .collumn+.collumn {
-                border-left: none;
-                border-bottom: 1px solid #2f2f2f;
-            }
-
-            header {
-                max-width: 320px;
-                font-size: 60px;
-                line-height: 54px;
-                overflow: hidden;
-            }
-
-        }
     </style>
 
     <body>
@@ -376,90 +86,288 @@
             </div>
             <div class="subhead">這裡收錄的我們所有的直播影片</div>
         </div>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-        <div class="content">
-            <div class="collumns">
-                <!-- 第一行開始 -->
-                <div class="collumn">
-                    <div class="head"><span class="headline hl3">第一部直播影片</span>
-                        <p><span class="headline hl4">這部影片是哪家的linea</span></p>
-                    </div>
-                    這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介</p>
-                    <figure class="figure">
-                        <iframe class="media" src="https://www.youtube.com/embed/EeZ4O_qgaEk" frameborder="0"
-                            allowfullscreen></iframe>
-                        <figcaption class="figcaption">這裡可以放影片的註解</figcaption>
-                    </figure>
-                    <div class="separator"></div>
-                    <div class="head"><span class="headline hl3">第一部直播影片</span>
-                        <p><span class="headline hl4">這部影片是哪家的linea</span></p>
-                    </div>
-                    這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介</p>
-                    <!-- <span class="citation">"Don't under&shy;estimate the Force. I suggest you try it again,
-                        Luke."</span> This time, let go your conscious self and act on instinct. In my experience,
-                    there is no such thing as luck. You're all clear, kid. Let's blow this thing and go home!
-                    </p>
-                    <p>You don't believe in the Force, do you? Partially, but it also obeys your commands. The plans you
-                        refer to will soon be back in our hands. As you wish.</p> -->
-                </div>
-                <!-- 第一行結束 -->
-                <div class="collumn">
-                    <div class="head"><span class="headline hl3">第二部直播影片題目</span>
-                        <p><span class="headline hl6">The crowd seemed to grow</span></p>
-                    </div>
-                    這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介這裡要放這部影片的簡介</p>
-                    <figure class="figure">
-                        <iframe class="media" src="https://www.youtube.com/embed/mEzjx1yaW60" frameborder="0"
-                            allowfullscreen></iframe>
-                        <figcaption class="figcaption">這裡可以放影片的註解</figcaption>
-                    </figure>
-                    <div class="separator"></div>
-                </div>
-                <div class="collumn">
-                    <div class="head"><span class="headline hl3">第三部直播影片題目</span>
-                        <p><span class="headline hl2">Let go your conscious self and act on instinct</span></p>
-                    </div>Partially, but it also obeys your commands. Hey, Luke! May the Force be with you. I have
-                    traced the Rebel spies to her. Now she is my only link to finding their secret base.</p>
-                    <figure class="figure">
-                        <img class="media" src="http://i.giphy.com/4fDWVPMoSyhgc.gif" alt="">
-                        <figcaption class="figcaption">"This time, let go your conscious self and act on instinct."
-                        </figcaption>
-                    </figure>
-                    <p>Leave that to me. Send a distress signal, and inform the Senate that all on board were killed.
+            /* DEFAULT VALUES */
 
-                </div>
-                <div class="collumn">
-                    <div class="head"><span class="headline hl3">第四部直播影片題目</span>
-                        <p><span class="headline hl4">A thousand unknown plants</span></p>
-                    </div>
-                    <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I
-                        never was a greater artist than now. When, while the lovely valley teems with vapour around me,
-                        and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but
-                        a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by
-                        the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by
-                        me: when I hear the buzz of the little world among the stalks, and grow familiar with the
-                        countless indescribable forms of the insects and flies, then I feel the presence of the
-                        Almighty, who formed us in his own image, and the breath</p>
-                </div>
-                <div class="collumn">
-                    <div class="head"><span class="headline hl3">第五部直播影片題目</span>
-                        <p><span class="headline hl4">by FRANZ KAFKA</span></p>
-                    </div>
-                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed
-                        into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he
-                        could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding
-                        was hardly able to cover it and seemed ready to slide off any moment. </p>
 
-                    <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly
-                        as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human
-                        room although a little too small, lay peacefully between its four familiar walls. A collection
-                        of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it
-                        there hung a picture that he had recently cut out of an illustrated magazine and housed in a
-                        nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright,
-                        raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then
-                        turned to look out the window at the dull weather. </p>
-                </div>
+            .blob-c {
+                /* min-height: 100vh; */
+                overflow: hidden;
+                position: absolute;
+                width: 100%;
+                filter: blur(40px);
+                /*   background: rgba(255,255,255,0.1) */
+            }
+
+            .blob {
+                background: #26C3F9;
+                height: 60px;
+                width: 80px;
+                border-radius: 40% 50% 30% 40%;
+                animation:
+                    transform 18s ease-in-out infinite both alternate, movement_one 12s ease-in-out infinite both;
+                opacity: .7;
+                position: absolute;
+                left: 75%;
+                top: 40%;
+            }
+
+            .blob.one {
+                background: #0085FF;
+                height: 150px;
+                width: 200px;
+                left: 10px;
+                top: 10px;
+                transform: rotate(-180deg);
+                animation: transform 8s ease-in-out infinite both alternate, movement_two 20s ease-in-out infinite both;
+            }
+
+            .blob.two {
+                background: #4EAEFF;
+                height: 150px;
+                width: 150px;
+                left: 600px;
+                top: 250px;
+                transform: rotate(-180deg);
+                animation: transform 10s ease-in-out infinite both alternate, movement_two 10s ease-in-out infinite both;
+            }
+
+            .blob.three {
+                background: #0EAFFF;
+                height: 150px;
+                width: 150px;
+                left: 800px;
+                top: 30px;
+                transform: rotate(-180deg);
+                animation: transform 7s ease-in-out infinite both alternate, movement_two 23s ease-in-out infinite both;
+            }
+
+            .blob.four {
+                background: #4EAEFF;
+                height: 100px;
+                width: 100px;
+                left: 500px;
+                top: 60px;
+                transform: rotate(-180deg);
+                animation: transform 17s ease-in-out infinite both alternate, movement_two 12s ease-in-out infinite both;
+            }
+
+            .blob.five {
+                background: #0085FF;
+                height: 100px;
+                width: 80px;
+                left: 480px;
+                top: 250px;
+                transform: rotate(-180deg);
+                animation: transform 12s ease-in-out infinite both alternate, movement_two 18s ease-in-out infinite both;
+            }
+
+            .blob.six {
+                background: #0EAFFF;
+                height: 70px;
+                width: 100px;
+                left: 160px;
+                top: 400px;
+                transform: rotate(-180deg);
+                animation: transform 5s ease-in-out infinite both alternate, movement_two 7s ease-in-out infinite both;
+            }
+
+            .blob.seven {
+                background: #0085FF;
+                height: 70px;
+                width: 100px;
+                left: 400px;
+                top: 400px;
+                transform: rotate(-180deg);
+                animation: transform 5s ease-in-out infinite both alternate, movement_two 12s ease-in-out infinite both;
+            }
+
+            @keyframes transform {
+
+                0%,
+                100% {
+                    border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%;
+                }
+
+                20% {
+                    border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%;
+                }
+
+                40% {
+                    border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%;
+                }
+
+                60% {
+                    border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%;
+                }
+
+                80% {
+                    border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%;
+                }
+            }
+
+            @keyframes movement_one {
+
+                0%,
+                100% {
+                    transform: none;
+                }
+
+                50% {
+                    transform: translate(50%, 20%) rotateY(10deg) scale(1);
+                }
+            }
+
+            @keyframes movement_two {
+
+                0%,
+                500% {
+                    transform: none;
+                }
+
+                50% {
+                    transform: translate(50%, 100%) rotate(-200deg) scale(1.3);
+                }
+            }
+
+
+            /* CARD */
+
+            section {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                padding: 80px 40px 40px 80px;
+            }
+
+            .card {
+                width: min(100%, 500px);
+                background: rgba(255, 255, 255);
+                border-radius: 16px;
+                font-family: "Poppins", sans-serif;
+                z-index: 5;
+            }
+
+            .card>img {
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                aspect-ratio: 4/3;
+                object-fit: cover;
+                object-position: 50% 50%;
+                border-radius: 16px 16px 0 0;
+                filter: contrast(70%);
+                transition: all 0.6s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+            }
+
+            .card>iframe {
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                aspect-ratio: 4/3;
+                object-fit: cover;
+                object-position: 50% 50%;
+                border-radius: 16px 16px 0 0;
+                filter: contrast(70%);
+                transition: all 0.6s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+            }
+
+            .card>img:hover {
+                filter: contrast(100%);
+            }
+
+            .card>iframe:hover {
+                filter: contrast(100%);
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                padding: 20px 15px 20px;
+            }
+
+            .card-content>p {
+                margin-bottom: 10px;
+            }
+
+            .card-content>p:nth-child(1) {
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 10px;
+                color: #1e40af;
+            }
+
+            .card-content>p:nth-child(2) {
+                font-size: 0.8rem;
+                font-weight: 400;
+                color: #6b7280;
+            }
+
+            @media (max-width: 900px) {
+                section {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 500px) {
+                section {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        </style>
+        <div class="container">
+            <div class="blob-c">
+                <div class="blob"></div>
+                <div class="blob one"></div>
+                <div class="blob two"></div>
+                <div class="blob three"></div>
+                <div class="blob four"></div>
+                <div class="blob five"></div>
+                <div class="blob six"></div>
+                <div class="blob seven"></div>
             </div>
+
+            <section>
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/kf3Xen_g4Gc" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <p>第一步影片標題</p>
+                        <p>第一部影片概述</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/mEzjx1yaW60" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <p>第二部影片標題</p>
+                        <p>第二部影片概述</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/emQ5ku_iFtg" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <p>第三部影片標題</p>
+                        <p>第三部影片概述</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/HPHcRiSd6no" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <p>第四部影片標題</p>
+                        <p>第四部影片概述</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <iframe src="https://www.youtube.com/embed/EeZ4O_qgaEk" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-content">
+                        <p>第五部影片標題</p>
+                        <p>第五部影片概述</p>
+                    </div>
+                </div>
+            </section>
         </div>
 
     </body>
