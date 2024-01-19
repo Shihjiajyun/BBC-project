@@ -17,9 +17,9 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/all.js"></script>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/all.js"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
 </head>
@@ -28,7 +28,7 @@
     <!-- 上方導覽列-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">test測試網頁</a>
+            <a class="navbar-brand" href="#page-top">後台系統</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -38,23 +38,24 @@
                     <li class="nav-item"><a class="nav-link" href="article.html">文章專區</a></li>
                     <li class="nav-item"><a class="nav-link" href="videos/video.html.php">影音專區</a></li>
                     <li class="nav-item"><a class="nav-link" href="aboutus.html">團隊介紹</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php"><b></b>登入</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../logout.php"><b></b>登出</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- 網頁視覺圖片-->
-    <header class="masthead">
+    <header class="masthead" style="background: url('linea.jpg')center center/cover no-repeat;filter: saturate(90%);">
         <div class=" container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-8 align-self-end">
-                    <h1 class="text-white font-weight-bold">一個手把手教學撸空投的網站</h1>
+                    <h1 class="text-white font-weight-bold" style="color: white;">一個手把手教學撸空投的網站</h1>
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">在這裡以一個最輕鬆、明瞭的方式學會撸最新的空投</p>
-                    <a class="btn btn-primary btn-xl" href="#index_article">了解更多</a>
+                    <p class="text-white-75 mb-5"><span style="color: rgb(0, 153, 255);">在這裡以一個最輕鬆、明瞭的方式學會撸最新的空投</span>
+                    </p>
+                    <a class="btn btn-primary btn-xl" href="#index_article" style="color: white;">了解更多</a>
                 </div>
             </div>
         </div>
