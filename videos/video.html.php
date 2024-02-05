@@ -66,7 +66,6 @@
                 <input type="text" name="videoName" id="videoName" required>
                 <br>
                 <br>
-                
                 <input class="btn btn-outline-secondary" type="submit" value="上傳影片">
             </form>
             <hr>
@@ -100,7 +99,6 @@
                                 </video>
                             </div>';
                     }
-                
                     // 結束 section
                     echo '</section>';
             } else {
@@ -109,7 +107,6 @@
             $conn->close();
             ?>
             </div>
-        
         </div>
 
         <div class="container">
